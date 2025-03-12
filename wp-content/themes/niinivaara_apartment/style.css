@@ -1,0 +1,630 @@
+/*
+Theme Name: Niinivaara Apartment
+Theme URI: http://example.com/ (optional, can be blank)
+Description: A theme for Niinivaara Apartment (optional)
+Author: Dinara Arifulova
+Author URI: http://example.com/ (optional)
+Version: 1.0 (optional)
+*/
+    /* Colours https://colormagic.app/palette/671c3f2e53d1e2a13ca7eed2
+    https://colormagic.app/palette/67175a8505be06574969161f */
+body {
+    background-color: #e1eae5;
+    font-family: 'Monserrat';
+    line-height: 1.3;
+    color: #2a494c ;
+}
+
+h1 {
+    font-size: 3em;
+
+}
+h2 {
+    font-size: 2.25em;
+}
+h3 {
+    font-size: 1.875em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+h5 {
+    font-size: 1.25em;
+}
+p {
+    font-size: 1.25em;
+}
+#site-container {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+/* Контейнер заголовка */
+#site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+ 
+ 
+}
+/* Внутренний контент заголовка */
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+#top-navi {
+    flex-grow: 1;
+    text-align: center;
+    
+}
+#top-navi ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+#top-navi ul li {
+    position: relative;
+}
+
+
+#top-navi ul li a{
+    text-decoration: none;
+
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 40px;
+    color: #2a494c ;
+    font-family: 'Monserrat';
+    font-weight: 400;
+}
+#top-navi .sub-menu {
+ position: absolute;
+ top: 100%;
+ left: 0;
+ z-index: 1;
+ margin-top: 2px;
+ display: none;
+}
+#top-navi ul li:hover .sub-menu{
+    display: block;
+}
+#top-navi .sub-menu li {
+    white-space: nowrap;
+    background-color: #e1eae5;
+}
+#top-navi .sub-menu li a{
+font-size: 1.875em;
+}
+#top-navi .sub-menu li:hover, #top-navi ul li a:hover {
+
+    background-color: #a7d7b8;
+}
+
+#top-navi ul li.current-menu-item > a,
+#top-navi ul li.current-category-parent > a {
+    background-color: #a7d7b8; 
+}
+#site-header .header-content .logo img{
+    max-width: 150px;
+    height: auto;
+}
+
+
+/* Смена языка */
+/* .language-switcher {
+    display: flex;
+    align-items: center;
+} */
+
+/* Основные стили переключателя языка */
+/* Общий контейнер */
+.language-switcher {
+    position: relative;
+    display: inline-block;
+}
+
+/* Текущий язык */
+.language-switcher .current-language {
+    cursor: pointer;
+    
+}
+
+.language-switcher .current-language img {
+    width: 40px; 
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.2s ease; 
+}
+
+.language-switcher .current-language img:hover {
+    transform: scale(1.05); 
+}
+
+/* Выпадающий список языков */
+.language-switcher .language-menu {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    display: none; 
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 5px;
+    z-index: 10;
+}
+
+
+.language-switcher .language-menu li {
+    padding: 5px;
+}
+
+.language-switcher .language-menu li a {
+    display: inline-block;
+}
+
+.language-switcher .language-menu li img {
+    width: 30px; 
+    height: auto;
+    transition: opacity 0.2s ease;
+    opacity: 0.8;
+}
+
+.language-switcher .language-menu li img:hover {
+    opacity: 1;
+}
+
+
+.language-switcher:hover .language-menu,
+.language-switcher .language-menu:hover {
+    display: block; 
+}
+
+
+.language-switcher .language-menu li {
+    transform: translateY(-10px); 
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.language-switcher:hover .language-menu li {
+    transform: translateY(0); 
+    opacity: 1;
+}
+
+
+#content {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+#content .about {
+    width: 70%;
+    
+}
+
+#content .about p, #content .about h1{
+    color: #2a494c;
+}
+#sidebar {
+    width: 30%;
+    padding: 0 10px;
+    background-color: #4e796b20;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    color: #2a494c;
+}
+.wp-block-heading {
+    color: #2a494c;
+    text-align: center;
+}
+
+/* General Form Styles */
+.wpcf7-form {
+
+  
+
+
+    color: #2a494c;
+}
+
+/* Labels */
+.wpcf7-form label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #3b7981; /* Medium teal */
+}
+
+/* Input Fields */
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form input[type="submit"],
+.wpcf7-form textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem 0rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #7cb1a3; /* Soft teal border */
+    outline: none;
+    color: #2a494c; /* Deep teal */
+    background-color: #a9d6b4; /* Soft green */
+}
+
+/* Textarea */
+.wpcf7-form textarea {
+    resize: none;
+    height: 150px;
+}
+
+/* Input Focus */
+.wpcf7-form input[type="text"]:focus,
+.wpcf7-form input[type="email"]:focus,
+.wpcf7-form textarea:focus {
+    background-color: #7cb1a3; /* Rich green */
+    color: #ffffff; /* White for better contrast */
+    border-color: #3b7981; /* Highlight border */
+    box-shadow: 0 0 5px #3b7981;
+}
+
+/* Submit Button */
+.wpcf7-form input[type="submit"] {
+    background-color: #3b7981; /* Medium teal */
+    color: #ffffff; /* White text */
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.wpcf7-form input[type="submit"]:hover {
+    background-color: #2a494c; /* Deep teal */
+    color: #a9d6b4; /* Soft green */
+}
+
+/* Error and Success Messages */
+.wpcf7-response-output {
+    display: block;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.wpcf7-response-output.wpcf7-mail-sent-ok {
+    background-color: #d4edda; /* Success background */
+    color: #155724; /* Success text */
+    border: 1px solid #c3e6cb;
+}
+
+.wpcf7-response-output.wpcf7-validation-errors {
+    background-color: #f8d7da; /* Error background */
+    color: #721c24; /* Error text */
+    border: 1px solid #f5c6cb;
+}
+
+.map-contacts {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.map {
+    width: 70%;
+    display: flex;
+}
+
+.contacts {
+    width: 30%;
+    background-color: #f8f6f1;
+    color: #2a494c;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+}
+.contacts a:-webkit-any-link {
+    text-decoration: none;
+    color: #2a494c;
+}
+
+.contacts p i {
+    margin-right: 8px;
+}
+#apartments-box {
+    display: flex;
+    gap: 10px;
+}
+
+.apartment {
+    width: 50%;
+}
+
+.apartment .excerpt a:-webkit-any-link{
+    text-decoration: none;
+    color: #66b2a0;
+}
+.apartment h3 a {
+    text-decoration: none;
+    color: #2a494c;
+}
+
+/* Custom Shop Page Styles */
+
+
+
+.custom-shop-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.shop-header h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.custom-shop-content {
+    display: flex;
+    gap: 20px;
+}
+
+.shop-sidebar {
+    width: 25%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shop-products {
+    width: 75%;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+/* Remove bullets from WooCommerce product list */
+.custom-product-item ::marker {
+    list-style: none;
+    margin: 0; /* Optional: Adjust spacing */
+    padding: 0;
+}
+.custom-product-item li {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Ensure spacing */
+    height: 100%; /* Make li take full height */
+    list-style: none;
+}
+.custom-product-item {
+    width: calc(33.333% - 20px);
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+    display: flex; /* Flexbox for product-item */
+    flex-direction: column; /* Align content in column */
+}
+
+.custom-product-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.custom-product-item a {
+    text-decoration: none;
+     color: #66b2a0;
+}
+/* Hide WooCommerce Sale badge */
+.woocommerce span.onsale {
+    display: none !important;
+}
+
+a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart {
+    color: #f8f8f8;
+
+    padding: 10px;
+    background-color: #66b2a0;
+    border-radius: 5px;
+    display: block;
+    font-size: 24px;
+    border: 1px solid #2a494c;
+    margin-top: auto; /* Push button to bottom */
+    text-align: center;   
+    margin-top: 10px;
+}
+#site-footer {
+    background-color:#2a494c;
+    color: #3b7981;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 1.25em;
+}
+
+/* Basket Item Container */
+.basket-item {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    gap: 15px;
+}
+
+/* Thumbnail Styling */
+.basket-item-thumbnail img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Details Section */
+.basket-item-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.basket-item-name {
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.basket-item-name:hover {
+    text-decoration: underline;
+}
+
+.basket-item-price {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Controls Section */
+.basket-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-input {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.update-cart-button,
+.remove-item {
+    background-color: #0071a1;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.update-cart-button:hover,
+.remove-item:hover {
+    background-color: #005c85;
+}
+
+.remove-item {
+    background-color: #e53935;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.remove-item:hover {
+    background-color: #c62828;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px){
+    /* Стили для десктопов */
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Стили для ноутбуков  */
+    #site-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    /* Center align the navigation */
+    #top-navi {
+        text-align: center;
+    }
+
+    #top-navi ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #top-navi ul li a {
+        font-size: 1.5em; 
+        padding: 10px;
+    }
+
+    /* Stack content sections vertically */
+    #content {
+        flex-direction: column;
+    }
+
+    #content .about, #content #sidebar {
+        width: 100%; 
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Map and contact sections stack */
+    .map-contacts {
+        flex-direction: column;
+  
+    }
+
+    .map, .contacts {
+        flex: unset; /* Reset flex-grow/shrink properties */
+        width: 100%; /* Full width for stacked layout */
+        padding: 0;
+    }
+
+    /* Adjust form styles for better usability */
+    .wpcf7-form {
+    padding: 0;
+    }
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    /* Стили для планшетов */
+
+    #site-header .header-content .logo img{
+    max-width: 100px;
+    height: auto;
+}
+
+    #content .about, #sidebar {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 480px) {
+    /* Стили для мобильных устройств */
+    #content .about, #sidebar {
+        width: 100%;
+    }        
+    h1 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
