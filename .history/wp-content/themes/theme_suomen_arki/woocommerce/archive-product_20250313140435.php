@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 
 get_header( );
 ?>
-<h1>Расписание и запись</h1>
+<h1><?php the_title(); ?></h1>
 <div class="main-page-actual-events">
 <?php 
 echo do_shortcode('[MEC id="126"]')

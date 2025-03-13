@@ -163,12 +163,10 @@ remove_action( 'woocommerce_shop_loop_header', 'woocommerce_product_taxonomy_arc
 // Add custom <h3> title inside div
 add_action( 'woocommerce_shop_loop_header', 'custom_woocommerce_shop_page_title', 10 );
 
-
-//create custom taxonomy for pages
 function add_categories_to_pages() {
     register_taxonomy(
-        'page_category', 
-        'page', 
+        'page_category', // Название таксономии
+        'page', // Применяем к страницам
         array(
             'label'        => 'Категории страниц',
             'rewrite'      => array('slug' => 'page-category'),
@@ -178,16 +176,5 @@ function add_categories_to_pages() {
     );
 }
 add_action('init', 'add_categories_to_pages');
-//add ecerpt functionality for pages
-function add_excerpt_to_pages() {
-    add_post_type_support('page', 'excerpt');
-}
-add_action('init', 'add_excerpt_to_pages');
 
-//custom fileds addiing
-
-function enable_custom_fileds(){
-    add_post_type_support('page', 'custom-fields');
-}
-add_action('init', 'enable_custom_fileds')
 ?> 

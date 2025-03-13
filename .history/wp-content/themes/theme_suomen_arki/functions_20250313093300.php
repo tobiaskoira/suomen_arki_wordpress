@@ -184,10 +184,4 @@ function add_excerpt_to_pages() {
 }
 add_action('init', 'add_excerpt_to_pages');
 
-//custom fileds addiing
-
-function enable_custom_fileds(){
-    add_post_type_support('page', 'custom-fields');
-}
-add_action('init', 'enable_custom_fileds')
 ?> 

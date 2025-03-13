@@ -175,7 +175,7 @@ get_header();
 
     <div class="main-page-events-month-calendar">
         <?php 
-        echo do_shortcode('[MEC id="126"]')
+        echo do_shortcode('[MEC id="62"]')
         ?>
     </div>
     <div class="main-page-arrow-left">

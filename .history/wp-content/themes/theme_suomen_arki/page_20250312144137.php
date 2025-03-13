@@ -11,9 +11,9 @@ get_header();
             <article class="single-page">
                 <h1><?php the_title(); ?></h1>
 
-                <!-- <?php if (has_post_thumbnail()) : ?>
+                <?php if (has_post_thumbnail()) : ?>
                     <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
-                <?php endif; ?> -->
+                <?php endif; ?>
 
                 <div class="page-text">
                     <?php the_content(); ?> <!-- ✅ Allows adding content via the editor -->

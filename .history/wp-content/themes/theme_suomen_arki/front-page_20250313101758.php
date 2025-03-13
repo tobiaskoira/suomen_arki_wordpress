@@ -62,7 +62,7 @@ get_header();
     </div>
     <div class="main-page-actual-events">
         <?php 
-        echo do_shortcode('[MEC id="125"]')
+        echo do_shortcode('[MEC id="45"]')
         ?>
     </div> 
     <div class="main-page-socialicons-banner">
@@ -81,8 +81,7 @@ get_header();
     </div>
 
     <section class="projects">
-   
- 
+
     <?php
     $args = array(
         'post_type'      => 'page',
@@ -101,58 +100,28 @@ get_header();
     $projects = new WP_Query($args);
 
     if ($projects->have_posts()) :
-        $count = 0; // Counter to track even/odd items
         while ($projects->have_posts()) : $projects->the_post();
-            $count++;
-            $is_even = $count % 2 == 0; // Check if the post index is even
-
-    $subtitle = get_post_meta(get_the_ID(), 'project_subtitle', true); // Fetch custom field
     ?>
-
-                <div class="project-container <?php echo $is_even ? 'reverse' : ''; ?>">
-                <?php if ($is_even) : ?>
-                    <!-- Right side first for even items -->
-                    <div class="project-container-right">
-                        <div class="project-title">
-                            <a href="<?php the_permalink(); ?>">
-                            <h3><?php echo esc_html($subtitle); ?></h3>
-                            </a>
-                        </div>
-                        <div class="project-description">
-                            <a href="<?php the_permalink(); ?>">
-                                <p><?php the_excerpt(); ?></p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-container-left">
+            <div class="project-container">
+                <div class="project-container-left">
+                    <a href="<?php the_permalink(); ?>">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                        <?php endif; ?>
+                    </a>
+                </div>
+                <div class="project-container-right">
+                    <div class="project-title">
                         <a href="<?php the_permalink(); ?>">
-                            <?php if (has_post_thumbnail()) : ?>
-                                <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
-                            <?php endif; ?>
+                            <h3><?php the_title(); ?></h3>
                         </a>
                     </div>
-                <?php else : ?>
-                    <!-- Left side first for odd items -->
-                    <div class="project-container-left">
+                    <div class="project-description">
                         <a href="<?php the_permalink(); ?>">
-                            <?php if (has_post_thumbnail()) : ?>
-                                <img src="<?php the_post_thumbnail_url(); ?>" alt="<h3><?php the_excerpt(); ?></h3>">
-                            <?php endif; ?>
+                            <p><?php the_excerpt(); ?></p>
                         </a>
                     </div>
-                    <div class="project-container-right">
-                        <div class="project-title">
-                            <a href="<?php the_permalink(); ?>">
-                            <h3><?php echo esc_html($subtitle); ?></h3>
-                            </a>
-                        </div>
-                        <div class="project-description">
-                            <a href="<?php the_permalink(); ?>">
-                                <p><?php the_excerpt(); ?></p>
-                            </a>
-                        </div>
-                    </div>
-                <?php endif; ?>
+                </div>
             </div>
     <?php 
         endwhile;
@@ -161,7 +130,6 @@ get_header();
         echo '<p>Проектов пока нет.</p>';
     endif;
     ?>
-          
 </section>
 
       <div class="main-page-arrow-right">
@@ -175,7 +143,7 @@ get_header();
 
     <div class="main-page-events-month-calendar">
         <?php 
-        echo do_shortcode('[MEC id="126"]')
+        echo do_shortcode('[MEC id="62"]')
         ?>
     </div>
     <div class="main-page-arrow-left">
