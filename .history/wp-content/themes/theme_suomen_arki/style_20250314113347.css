@@ -1,0 +1,1532 @@
+/*
+Theme Name: theme_suomen_arki
+Theme URI: http://example.com/ (optional, can be blank)
+Description: A theme for Suomen Arki webpage
+Author: Dinara Arifulova
+Author URI: http://example.com/ (optional)
+Version: 1.0 (optional)
+*/
+* {
+    box-sizing: border-box;
+}
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 150px;
+
+    background-color: #0155E5;
+    font-family: 'Monserrat';
+    font-size: 1.25em;
+    color: #fff ;
+    line-height: 34px;
+    letter-spacing: 2px;
+}
+h1 {
+    font-size: 3em;
+
+}
+h2 {
+    font-size: 2.25em;
+}
+h3, .woocommerce-products-header__title .page-title {
+    font-family: Poppins;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28.8px;
+    letter-spacing: 5px;
+    
+}
+
+h4 {
+  
+}
+h5 {
+   
+}
+p {
+    text-decoration: none;
+    color: #fff;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 1.25em;
+    line-height: 34px;
+    letter-spacing: 2px;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* header styles starts */
+#main-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 1440px;
+    position: fixed;
+    z-index: 1000;
+    top: 20px;
+
+}
+/* Header Background After Scrolling */
+#main-header.scrolled {
+    background: rgba(1, 85, 229, 0.9); /* Darker background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+}
+.commerce-menu {
+    position: absolute;
+    top: 10px; /* Adjust spacing from the top */
+    right: 0px; /* Adjust spacing from the right */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 1100; /* Lower than header content */
+}
+/* User Dropdown */
+.user-dropdown {
+    position: relative;
+}
+
+.user-dropdown .user-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    padding: 10px 0;
+    list-style: none;
+    text-align: left;
+}
+
+.user-dropdown:hover .user-menu {
+    display: block;
+}
+
+.user-menu li {
+    padding: 10px;
+}
+
+.user-menu li a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+}
+
+.user-menu li a:hover {
+    background: rgba(1, 85, 229, 0.1);
+}
+/* Style User Icon */
+.header-user a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.5px;
+    letter-spacing: 2px;
+    
+}
+
+.header-user i {
+    font-size: 22px;
+    margin-right: 5px;
+}
+.header-cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+.header-cart a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.header-cart .icon-cart {
+    font-size: 24px;
+
+}
+
+.cart-count {
+    background: red;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 0.1em 0.5em; /* Converted from 4px 8px */
+    position: absolute;
+    top: -10px; /* Converted from -5px */
+    right: -15px; /* Converted from -10px */
+}
+/* Внутренний контент заголовка */
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 2;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    flex: 1; 
+}
+#top-navi {
+    flex-grow: 1;
+    text-align: center;
+    
+}
+
+#top-navi ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+#top-navi ul li {
+    position: relative;
+}
+
+
+#top-navi ul li a{
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px 20px;
+    text-align: left;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+}
+#top-navi .sub-menu, #top-navi-mobile .sub-menu {
+    display: none;
+    position: absolute; 
+    width: 100%; 
+    text-align: left;
+
+}
+ #top-navi-mobile .sub-menu {
+    display: none;
+    position: relative; 
+    width: 100%; 
+    text-align: left;
+
+}
+
+#top-navi ul li.active .sub-menu, 
+#top-navi-mobile ul li.active .sub-menu {
+    display: block;
+}
+#top-navi ul li:hover .sub-menu
+{
+    display: block;
+}
+#top-navi .sub-menu li {
+    white-space: nowrap;
+    background-color: #0155E5; 
+
+}
+#top-navi .sub-menu li a{
+font-size: 0.95em;
+}
+#top-navi .sub-menu li:hover, #top-navi ul li a:hover {
+
+    background-color: #fff;
+    color: #0155E5;
+    border-radius: 10px;
+}
+
+#top-navi ul li.current-menu-item > a,
+#top-navi ul li.current-category-parent > a {
+    background-color: #fff; 
+    border-radius: 10px;
+    color: #0155E5;
+}
+#top-navi-mobile ul li > a {
+    display: flex;
+    justify-content: space-between; /* Aligns text and dropdown arrow */
+    padding: 15px;
+    cursor: pointer;
+}
+#top-navi-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    box-shadow: 0px 1px 1px 0px #00000040;
+    border-radius: 10px;
+    overflow-y: auto; /* Включаем прокрутку внутри меню */
+    background: rgba(0, 85, 229, 0.9);  /* Dark background */
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow-y: auto;
+}
+/* Prevent background scrolling when mobile menu is open */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Close Button */
+.close-btn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+/* Close Icon */
+.icon-close {
+    font-size: 30px;
+    color: white;
+}
+/* Show Mobile Menu When Active */
+#top-navi-mobile.active {
+    display: flex;
+}
+
+/* Mobile Menu Links */
+#top-navi-mobile ul {
+    list-style: none;
+    padding: 0 0 0 15px;
+    text-align: left;
+}
+
+#top-navi-mobile ul li {
+    margin: 15px 0;
+}
+
+#top-navi-mobile ul li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+}
+#top-navi-mobile ul.menu > li > a {
+    background-color: #FFFFFF1A;
+
+}
+.commerce-menu-mobile {
+
+    display: none;
+
+}
+/* Hamburger Icon (Visible Only on Mobile) */
+#hamburger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 40px;
+    padding: 10px;
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Show Hamburger Icon and Hide Normal Menu on Small Screens */
+@media screen and (max-width: 1024px) {
+    #top-navi, .commerce-menu {
+
+        display: none;
+    
+    }
+
+    #hamburger-menu {
+        display: flex;
+    }
+}
+    /* Show Close Button Inside Mobile Menu */
+    #top-navi-mobile .close-btn {
+        display: block;
+    }
+/* header styles ends */
+.header-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    gap: 10px;
+}
+
+
+/* language switcher styles starts override*/
+#language-switcher {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+    height: 30px;
+  
+}
+
+#top-navi  #language-switcher {
+    display: none;
+}
+/* .gtranslate_wrapper .gt_container-670fsc {
+    height: 30px !important;
+} */
+.gt_float_switcher .gt-selected .gt-current-lang {
+    padding: 0px !important;
+}
+.gt_float_switcher .gt-selected, .gt_float_switcher {
+
+    background: none !important;
+    background-color: transparent !important;
+
+    color: #fff !important;
+    display: inline-block !important;
+
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    
+        }
+.gt_float_switcher .gt_options a {
+    color: #fff !important;
+}
+/* .gt_float_switcher .gt_options img {
+    display: none !important;
+} */
+.gt_float_switcher .gt-selected .gt-current-lang span.gt-lang-code {
+    color: #fff !important;    
+    font-family: Montserrat !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    line-height: 19.5px !important;
+    letter-spacing: 2px !important;
+}
+
+.gt_float_switcher .gt-selected .gt-current-lang span.gt_float_switcher-arrow {
+
+    background-image: url("./icons/lang_arrow.png") !important;
+    transform: rotate(90deg) !important;
+    background-size: 20px 20px !important;
+
+}
+/* languahe swither styles ends */
+/* Banner Container */
+.banner {
+    background: url('./img/Background_image.png') no-repeat center center;
+    background-size: cover;
+    padding: 40px 20px;
+
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+
+    border-radius: 10px;
+}
+
+/* Title (Dotted Border) */
+.banner-title {
+    width: 100%;
+    margin-top: 40px;
+    background: none;
+    border: 3px dashed white; 
+    border-radius: 12px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+}
+.banner-title:hover {
+    background-color: #fff;
+  
+}
+
+.banner-title p {
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    text-align: center;
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.banner-title:hover p {
+    color: #0155E5; 
+}
+
+/*banner modal */
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 3000; /* Higher than other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background: #0155E5;
+   
+    padding: 20px;
+    width: 50%;
+    min-width: 300px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+
+/* Close Button */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* banner modal styles ends */
+/* Content Block */
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    position: relative;
+    height: 100%; /* Ensures full height */
+}
+
+/* Text Block */
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 525px;
+
+  
+}
+
+.banner-text h2 {
+    font-family: Poppins;
+    font-weight: 900;
+    font-size: 64px;
+    letter-spacing: 1px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+/* Bottom Elements Wrapper */
+.banner-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    position: absolute;
+    bottom: -40px; /* Positioning at the bottom */
+}
+
+/* Arrow */
+.banner-arrow {
+    flex-shrink: 0;
+ 
+}
+
+.banner-arrow img {
+    width: 100%;
+    height: auto;
+}
+
+/* Button */
+.banner .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    border: 3px solid #FFFFFF;
+    text-align: center;
+    background: transparent;
+    transition: background 0.3s ease-in-out;
+    box-shadow: 0px 4px 4px 0px #00000040;
+;
+}
+
+.banner .button a {
+    font-weight: 900;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.banner .button:hover {
+    background: #ffffff;
+}
+
+.banner .button:hover a {
+    color: #0155E5;
+}
+
+
+/* Smart slider styles starts
+*/
+.n2-ss-slider-2 {
+
+    border-radius: 10px !important;
+}
+div#n2-ss-3 .n2-ss-slide-limiter {
+
+    min-height: 300px !important;
+}
+/* styles ends*/
+
+/* Main page slider  styles starts*/
+
+.main-page-slider {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0 40px 0;
+}
+.main-page-slider-left, .main-page-slider-right {
+    flex: 1;
+    max-width: 50%;
+}
+
+.main-page-arrow-right {
+    width: auto; /* Prevents taking full width */
+    display: flex;
+    justify-content: flex-end; /* Align arrow to the right */
+    align-items: center;
+    margin-top: -80px; /* Moves it closer to the slider */
+    margin-bottom: -40px;
+    margin-right: -80px;
+}
+
+.main-page-arrow-right img {
+
+    height: auto;
+}
+.main-page-arrow-left img {
+    transform: scaleX(-1); /* Flips the image horizontally */
+    height: auto;
+}
+.main-page-arrow-left {
+    width: auto; /* Prevents taking full width */
+    display: flex;
+    justify-content: flex-start; /* Align arrow to the right */
+    align-items: center;
+    margin-top: -80px; /* Moves it closer to the slider */
+    margin-bottom: -40px;
+    margin-left: -80px;
+}
+
+
+.main-page-slider-right {
+ 
+    border: 3px solid #fff;
+    border-radius: 10px;
+    padding: 60px;
+    text-align: left;
+
+    align-self: stretch;
+    display: flex;
+    align-items: center;  /* Centers vertically */
+    justify-content: center;  /* Centers horizontally */
+}
+/* Main page slider styles ends*/
+
+/* Other items of mainpage styles starts*/
+.main-page-title, .woocommerce-products-header {
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+
+/* Other items of mainpage styles ends*/
+
+/* Events slider in main page override styles starts*/
+
+.main-page-actual-events {
+    margin-bottom: 40px !important;
+}
+.event-carousel-type3-head .mec-event-footer-carousel-type3 {
+    background: #0155E5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    border: 3px dashed white; 
+    border-radius: 12px ; 
+    color: #fff;
+}
+.event-carousel-type3-head .mec-event-footer-carousel-type3 .mec-booking-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #FFFFFF;
+    text-align: center;
+    background: transparent;
+    transition: background 0.3s ease-in-out;
+    box-shadow: 0px 4px 4px 0px #00000040;    
+    font-weight: 900;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;    
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 15px;
+}
+/* .mec-event-sharing-wrap li i, .mec-event-sharing-wrap li {
+display: none;
+} */
+.event-carousel-type3-head .mec-event-footer-carousel-type3 .mec-event-carousel-title {
+font-family: Montserrat;
+font-weight: 900;
+font-size: 16px;
+line-height: 19.5px;
+letter-spacing: 5px;
+text-transform: uppercase;
+color: #fff;
+
+}
+
+.mec-event-carousel-type2 .owl-next i, .mec-event-carousel-type2 .owl-prev i, .mec-event-carousel-type3 .owl-next i, .mec-event-carousel-type3 .owl-prev i, .mec-event-carousel-type4 .owl-next i, .mec-event-carousel-type4 .owl-prev i {
+
+    color: #fff;
+}
+/*  Events slider in main page styles ends*/
+
+/*  Social banner at main page styles starts*/
+
+.main-page-socialicons-banner {
+    background: url('./img/socialicon_banner.png') no-repeat center center;
+    background-size: cover;
+    padding: 40px 20px;
+
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+
+    box-shadow: 0px 1px 1px 0px #00000040;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+/* Overlay */
+.main-page-socialicons-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 85, 229, 0.8); /* Semi-transparent blue overlay */
+    border-radius: 10px;
+    z-index: 1;
+}
+.main-page-socialicons-banner * {
+    position: relative;
+    z-index: 2;
+}
+.main-page-socialicons-banner .socialicons {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+.main-page-socialicons-banner .socialicons img {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    display: flex; /* Ensures inline display */
+    justify-content: center;
+    align-items: center;
+}
+/*  Social icons banner in main page styles ends*/
+
+.projects {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 40px;
+    align-items: center; 
+    gap:20px;
+}
+.project-container {
+    display: flex;
+    align-items: stretch;; 
+    justify-content: space-between; 
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    color: #fff;
+    border-radius: 20px;
+    gap: 20px;
+
+
+}
+
+.project-container a {
+    text-decoration: none;
+    color: #fff;
+}
+.project-container-left {
+     width: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     overflow: hidden;
+     height: 575px;
+    border-radius: 10px;
+
+}
+.project-container-left img {
+
+    
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+.project-container-right {
+     width: 50%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-self: stretch;
+     gap: 20px;
+}
+.project-title{
+width: 100%;
+height: auto;
+gap: 15px;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex: 1;
+border: 1px solid #fff;
+padding: 40px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.project-description{
+width: 100%;
+height: auto;
+gap: 15px;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex: 1;
+border: 1px solid #fff;
+padding: 40px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.project-description p, .main-page-slider-right p{
+
+text-decoration: none; 
+color: #fff;
+font-family: Montserrat;
+font-weight: 500;
+font-size: 20px;
+line-height: 34px;
+letter-spacing: 2px;
+
+}
+
+/* single project page styles starts */
+.single-project {
+    width: 100%;
+}
+/* single project page styles ends */
+/*  Month calendar styles in main page starts*/
+.main-page-events-month-calendar {
+    margin-bottom: 40px;
+
+}
+.mec-calendar.mec-event-calendar-classic.mec-event-container-novel .mec-calendar-side .mec-calendar-table,
+.mec-calendar.mec-event-calendar-classic dl.mec-calendar-table-head,
+.mec-checkboxes-search .mec-searchbar-category-wrap,.mec-wrap .mec-totalcal-box
+
+{
+        background-color: #FFFFFF1A;
+        border-radius: 12px;
+}
+
+
+.mec-wrap .mec-totalcal-box .mec-totalcal-view span, 
+.mec-wrap .mec-totalcal-box input, 
+.mec-wrap .mec-totalcal-box select,
+
+.mec-calendar.mec-event-container-novel dl dt,
+.mec-sl-calendar,
+.mec-sl-folder,
+.mec-sl-magnifier,
+.button .mec-button,
+.mec-previous-month .mec-load-month .mec-previous-month,
+.mec-calendar .mec-calendar-side .mec-next-month, .mec-calendar .mec-calendar-side .mec-previous-month
+ {
+
+    background: none !important;
+
+}
+
+.event-carousel-type2-head .mec-event-carousel-content-type2 .mec-event-date-info, 
+.event-carousel-type2-head .mec-event-footer-carousel-type2 .mec-booking-button, 
+.mec-calendar .mec-calendar-side .mec-next-month a, 
+.mec-calendar .mec-calendar-side .mec-previous-month a, 
+.mec-calendar .mec-event-article .mec-event-detail, 
+.mec-calendar .mec-table-nullday, .mec-calendar.mec-calendar-daily .mec-calendar-a-month .mec-next-month, 
+.mec-calendar.mec-calendar-daily .mec-calendar-a-month .mec-next-month a, 
+.mec-calendar.mec-calendar-daily .mec-calendar-a-month .mec-previous-month, 
+.mec-calendar.mec-calendar-daily .mec-calendar-a-month .mec-previous-month a, 
+.mec-calendar.mec-calendar-daily .mec-calendar-d-table .mec-daily-view-day, 
+.mec-calendar.mec-calendar-daily .mec-calendar-d-top h2, 
+.mec-calendar.mec-calendar-daily .mec-calendar-d-top h3,
+ .mec-calendar.mec-calendar-daily .mec-today-container .mec-today-count, 
+ .mec-calendar.mec-calendar-timetable .mec-calendar-d-table dl dt.mec-timetable-has-no-event, 
+ .mec-calendar.mec-calendar-timetable .mec-calendar-d-table dl dt.mec-timetable-has-no-event:hover, 
+ .mec-calendar.mec-calendar-weekly .mec-calendar-d-table dl dt span, 
+ .mec-checkboxes-search .mec-searchbar-category-wrap, .mec-countdown-details .countdown-w .clockdiv li p, 
+ .mec-event-footer .mec-booking-button, .mec-event-footer .mec-modal-booking-button, 
+ .mec-event-grid-classic .mec-event-content p,
+  .mec-event-grid-clean .mec-event-content p, 
+  .mec-event-grid-modern .event-grid-modern-head .mec-event-day, 
+  .mec-event-grid-modern .mec-event-content p, .mec-event-list-modern .mec-event-date .event-da,
+   .mec-event-list-modern .mec-event-date .event-f, .mec-event-schedule-content dl dt.mec-schedule-description,
+    .mec-event-sharing-wrap li a, .mec-event-sharing-wrap:hover li ul li a, .mec-events-agenda-wrap .mec-agenda-time, 
+    .mec-events-agenda-wrap span.mec-agenda-day, .mec-events-meta-group-countdown .countdown-w .block-w li,
+     .mec-load-more-button, .mec-next-month a, .mec-previous-month a, .mec-price-details, 
+     .mec-price-details span,
+      .mec-related-event-content, .mec-single-event .mec-address, 
+      .mec-single-event .mec-current, .mec-single-event .mec-event-meta .mec-events-event-categories a, 
+      .mec-single-event .mec-event-meta dd, .mec-single-event .mec-event-meta dd a, 
+      .mec-single-event .mec-event-meta dd.mec-organizer-email a,
+       .mec-single-event .mec-events-meta-date dd span, 
+       .mec-single-event .mec-events-meta-group-booking .mec-event-ticket-available, 
+       .mec-single-event .mec-next-event-details abbr, 
+       .mec-single-event .mec-single-event-additional-organizers dd span, 
+       .mec-single-event .mec-single-event-organizer dd span, 
+       .mec-single-event .mec-speakers-details ul li .mec-speaker-job-title, 
+       .mec-skin-tile-month-navigator-container .mec-next-month,
+        .mec-skin-tile-month-navigator-container .mec-next-month a, 
+        .mec-skin-tile-month-navigator-container .mec-previous-month, 
+        .mec-skin-tile-month-navigator-container .mec-previous-month a,
+         .mec-wrap .button, .mec-wrap .mec-event-detail, .mec-wrap .mec-event-loc-place, 
+         .mec-wrap .mec-time-details, .mec-wrap .mec-totalcal-box .mec-totalcal-view span,
+          .mec-wrap .mec-totalcal-box .mec-totalcal-view span.mec-totalcalview-selected,
+          .mec-wrap .mec-totalcal-box i, .mec-wrap .mec-totalcal-box input, 
+          .mec-wrap .mec-totalcal-box label, .mec-wrap .mec-totalcal-box select, 
+          .mec-wrap a.button:not(.owl-dot), .mec-wrap button:not(.owl-dot):not(.gm-control-active):not(.mejs),
+           .mec-wrap input[type=button], .mec-wrap input[type=reset], .mec-wrap input[type=submit], 
+           .mec-yearly-view-wrap .mec-agenda-date-wrap i, .mec-yearly-view-wrap .mec-agenda-date-wrap span.mec-agenda-day,
+           .mec-yearly-view-wrap .mec-yearly-title-sec .mec-next-year, 
+           .mec-yearly-view-wrap .mec-yearly-title-sec .mec-next-year a, 
+           .mec-yearly-view-wrap .mec-yearly-title-sec .mec-previous-year, .mec-yearly-view-wrap .mec-yearly-title-sec .mec-previous-year a,
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product .stock {
+    color: #fff;
+}
+.mec-wrap .mec-totalcal-box,
+.mec-calendar .mec-calendar-side {
+    border-radius: 12px;
+    
+}
+.mec-wrap .mec-search-form .mec-date-search select,
+.mec-wrap .mec-totalcal-box input[type=search],
+.mec-checkboxes-search .mec-searchbar-category-wrap, .mec-wrap .mec-search-form .mec-dropdown-wrap .mec-dropdown-search select {
+
+    background: #0155E5 !important;
+}
+.mec-calendar .mec-calendar-table-head dt {
+    font-family: Poppins;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3px;
+    color: #fff;
+}
+
+.mec-box-calendar.mec-calendar .mec-calendar-header h2{
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29.26px;
+    letter-spacing: 5px;
+    color: #fff;
+}
+.mec-load-month-link {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.5px;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.mec-single-event-category {
+    display:none;
+ }
+.body[class*=mec-theme] .mec-wrap a
+ {
+background: #3788d8 !important;
+padding: 15px;
+border-radius: 10px;
+}
+/*  Month calendar in main page styles ends*/
+
+
+/*  Contact form join us in main page styles starts*/
+
+.membership {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+.membership-form h2 {
+    text-align: center;
+}
+.membership-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.membership-form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+/* 🔹 Form Wrapper */
+/* General Form Container */
+.contact-form-join-us {
+    width: 100%;
+ 
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Fields Wrapper - Light Blue Background */
+.contact-form-join-us-fields {
+    background: #FFFFFF1A;
+
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Each Form Group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* Labels */
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Input Fields */
+input, textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #b0c4de;
+    font-size: 14px;
+    background: white;
+    color: #3788d8;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+.custom-checkbox input {
+width: auto;
+    padding: 10px;
+    border-radius: 5px;
+
+    font-size: 14px;
+    background: white;
+    color: #3788d8;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    box-sizing: border-box;
+
+}
+textarea {
+    min-height: 100px; /* Adjust height */
+    resize: vertical; /* Allow users to expand it */
+}
+/* Input Focus */
+input:focus, textarea:focus {
+    border-color: #1e4dd8;
+    box-shadow: 0px 2px 5px rgba(30, 77, 216, 0.3);
+}
+
+/* Submit Button */
+.contact-form-join-us-submit, .woocommerce ul.products li.product .button {
+
+    margin-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+
+}
+
+.contact-form-join-us-submit input[type="submit"], .woocommerce ul.products li.product .button  {
+    background-color: #fff;
+}
+
+
+/* Submit Button Styling */
+.contact-form-join-us-submit input[type="submit"] {
+    border: 2px dashed #fff; /* Dashed border */
+    width: 100%;
+
+    padding: 12px 20px;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    background: transparent;
+    color: #fff;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18.75px;
+    letter-spacing: 5px;
+
+}
+
+/* Submit Button Hover Effect */
+.contact-form-join-us-submit input[type="submit"]:hover {
+    background: #fff;
+    color: #0155E5; 
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-form-join-us {
+        max-width: 90%;
+    }
+    
+    .contact-form-join-us-fields {
+        padding: 15px;
+    }
+    
+    .contact-form-join-us-submit input[type="submit"] {
+        width: 100%; /* Full width on mobile */
+    }
+    .main-page-title {
+    text-align: center;
+    padding: 20px;
+    }
+    
+
+}
+
+/*  Contact form join us in main page styles ends*/
+
+
+/*  Footer styles starts*/
+.site-footer-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 1px dashed #fff;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.site-footer-content .logo {
+    display: flex;
+    flex: 1;
+}
+.site-footer-text {
+
+    flex: 1;
+    text-align: center;
+}
+.site-footer-content .site-footer-text a{
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24.38px;
+    letter-spacing: 0px;
+    color: #fff;
+    text-decoration: none;
+}
+.site-footer-content .socialicons {
+    display: flex;
+    flex:1;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.site-footer-rights{
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 5px;
+
+}
+/* scroll to top arrow styles */
+
+
+.scroll-up-button {
+    position: fixed;
+    bottom: 30px; /* Adjust distance from the bottom */
+    right: 30px; /* Adjust distance from the right */
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 85, 229, 0.8); /* Semi-transparent blue */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect */
+.scroll-up-button:hover {
+    background: rgba(0, 85, 229, 1);
+}
+
+/* Arrow icon */
+.scroll-up-button i {
+    font-size: 24px;
+    color: #fff;
+}
+
+
+.scroll-up-button{
+    background: rgba(0, 85, 229, 1);
+}
+
+
+.scroll-up-button a {
+    text-decoration: none;
+}
+
+/*  Footer styles ends*/
+
+
+
+
+/* woo commerce styles starts */
+/* woo commerce my account main page */
+.woocommerce-account .woocommerce-MyAccount-navigation ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Change link color to white */
+.woocommerce-MyAccount-navigation ul li a {
+    color: white !important; /* Ensures links are white */
+    text-decoration: none; /* Optional: Remove underline */
+}
+
+/* Change background of active menu item */
+.woocommerce-MyAccount-navigation ul li.is-active {
+    background-color: rgba(255, 255, 255, 0.2); /* Light transparent background */
+    border-radius: 5px; /* Optional: Rounded edges */
+}
+
+/* Add padding and hover effect */
+.woocommerce-MyAccount-navigation ul li {
+    padding: 10px 15px;
+    transition: background 0.3s ease;
+}
+
+.woocommerce-MyAccount-navigation ul li:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Light hover effect */
+}
+/* woo commerce shop styles */
+.woocommerce ul.products li.product a img, 
+.woocommerce img, .woocommerce-page img{
+    border-radius: 10px;
+}
+.woocommerce ul.products li.product .button,
+.woocommerce div.product form.cart .button {
+    border: 2px dashed #fff; /* Dashed border */
+    width: 100%;
+
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    background: transparent;
+    color: #fff;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18.75px;
+    letter-spacing: 5px;
+
+}
+
+.woocommerce div.product form.cart .button {
+    border: 2px dashed #fff; /* Dashed border */
+    width: 50%;
+
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    background: transparent;
+    color: #fff;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18.75px;
+    letter-spacing: 5px;
+
+}
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt.disabled, 
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt.disabled:hover {
+    
+}
+
+.banner .button:hover a {
+    color: #0155E5;
+}
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) .woocommerce-breadcrumb,
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) .woocommerce-breadcrumb a {
+  
+    display: none;
+}
+.woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, 
+.woocommerce ul.products li.product h3,
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) ul.products li.product .price,
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product p.price, .woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product span.price,
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) .woocommerce-breadcrumb,
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) .woocommerce-breadcrumb a,
+.editor-styles-wrapper table.wc-block-cart-items .wc-block-cart-items__row .wc-block-components-product-name, table.wc-block-cart-items .wc-block-cart-items__row .wc-block-components-product-name,
+ .wc-block-components-button__text,
+ .woocommerce table.shop_table td a
+ {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* woo commerce cart styles */
+.wp-block-woocommerce-cart,
+.wp-block-woocommerce-checkout,
+.woocommerce .woocommerce-customer-details, .woocommerce .woocommerce-order-details, .woocommerce .woocommerce-order-downloads {
+    background-color: #FFFFFF1A;
+    border: 1px dashed #fff;
+    margin-bottom: 5em;
+    padding: 1em;
+}
+.wc-block-components-button {
+    text-decoration: none !important;
+    border: 1px #fff dashed;
+}
+
+.wc-block-components-button__text {
+    text-decoration: none !important;
+}
+.wp-block-woocommerce-checkout-actions-block .wc-block-checkout__actions_row .wc-block-components-checkout-place-order-button {
+    background: transparent;
+}
+/* woo commerce single product page*/
+.woocommerce .related {
+    clear: both !important;
+}
+
+
+
+/* woo commerce styles ends */
+/* Media Query for Tablets starts*/
+@media (max-width: 1024px) {
+    
+    body {
+            width: 100%;
+            margin: 0 auto;
+            padding: 130px 10px 10px 10px;
+        }
+    #main-header {
+    
+        padding: 0; 
+        width: 100%;
+ 
+
+        top: 10px;
+    }
+    .banner-title{
+        margin-top: 0;
+    }
+    .main-page-arrow-right, .main-page-arrow-left,
+     .header-right #language-switcher{
+        display: none;
+    }
+
+    .header-right {
+      
+        flex: none;
+        
+    }
+    #hamburger-menu {
+        align-items: center;
+        display: flex;
+        justify-content: right;
+        padding: 0;
+        margin-right: 30px;
+    }
+    .project-description p, .main-page-slider-right p{
+        line-height: 24px;
+    }
+    .mec-owl-theme .owl-nav [class*='owl-'] {
+        margin: 0 50px !important; 
+       
+        
+    }
+    .site-footer-content {
+        flex-direction: column;
+    }
+
+    #language-switcher {
+
+        padding-right: 25px;
+    }
+    .commerce-menu-mobile {
+        display: block;
+    }
+    
+}
+/* Media Query for Tablets ends*/
+
+/* Media Query for Mobile starts*/
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+
+        padding: 130px 15px 15px 15px;
+    }
+    .main-page-slider-left
+   {
+        display: none;
+    }
+     .main-page-slider-right {
+        
+        max-width: 100%;
+    }
+    .membership {
+        flex-direction: column;
+       }
+    .project-container-right, .project-container-left {
+        width: 100%;
+        display: block;
+        height: auto;
+        
+    }
+    .project-container{
+        flex-direction: column;
+    }
+    .project-container-left img {
+        width: 100%; 
+        height: 300px; 
+        object-fit: cover;
+      
+    }
+
+    .project-title {
+        margin-bottom: 15px;
+    }
+
+    .project-description, .project-title {
+        padding: 20px;
+    }
+    /* Modal Content */
+    .modal-content {
+
+
+        width: 100%;
+      
+    }
+    .banner-text h2 {
+        font-size: 32px;
+    }
+    .banner-text p {
+      
+        font-size: 20px;
+     
+    }
+    .banner-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        position: relative;
+       
+    }
+
+}
+/* Media Query for Mobile ends*/
+
